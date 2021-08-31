@@ -1,5 +1,7 @@
 # platform-specific-features
 
+_This is https://github.com/rust-lang/cargo/issues/9863_
+
 When a feature of a dependency is enabled, which enables optional transitive dependencies, those transitive dependencies are not marked as conditional in any way. One cannot work out "On Linux this dependency wouldn't be present". This remains the case even when `--filter-platform` is used.
 
 Ideally, either via `--filter-platform` or via metadata in the returned data structure, it should be clear that on a particular platform the dependency does not exist.
